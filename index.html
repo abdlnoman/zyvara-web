@@ -6,11 +6,13 @@
     <title>Zyvara - Digital Associates Program | Online Earning for Students in Bangladesh</title>
     <link rel="icon" type="image/png" href="images/nest (1).png">
     
-    <!-- SEO Meta Tags -->
+    <!-- Enhanced SEO Meta Tags -->
     <meta name="description" content="Zyvara Digital Associates Program: Earn income with USA virtual computer access. Perfect for students in Bangladesh. Join now for secure online earning opportunities.">
-    <meta name="keywords" content="Zyvara, online earning Bangladesh, student jobs, digital associate, USA virtual computer, VPS Bangladesh, micro tasks, online income, digital earning">
+    <meta name="keywords" content="Zyvara, online earning Bangladesh, student jobs, digital associate, USA virtual computer, VPS Bangladesh, micro tasks, online income, digital earning, freelancing Bangladesh, IT jobs Bangladesh, remote work Bangladesh">
     <meta name="author" content="Zyvara">
     <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="BD">
+    <meta name="geo.placename" content="Bangladesh">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Zyvara - Digital Associates Program | Online Earning for Students">
@@ -18,9 +20,31 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.zyvara.it.com">
     <meta property="og:image" content="https://www.zyvara.it.com/images/zyvara-og-image.jpg">
+    <meta property="og:site_name" content="Zyvara">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zyvara",
+      "url": "https://www.zyvara.it.com",
+      "logo": "https://www.zyvara.it.com/images/nest (1).png",
+      "description": "Digital Associates Program providing online earning opportunities for students in Bangladesh",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BD"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+880-1608273145",
+        "contactType": "Customer service"
+      }
+    }
+    </script>
     
     <style>
         /* Base Styles */
@@ -141,6 +165,28 @@
         @keyframes pulse {
             0% { transform: scale(1); opacity: 0.05; }
             100% { transform: scale(1.2); opacity: 0.15; }
+        }
+        
+        /* IT/Freelancing Elements */
+        .floating-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .floating-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.3;
+            animation: floatIcon 15s infinite ease-in-out;
+        }
+        
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(15px) rotate(240deg); }
         }
         
         /* Earth Animation */
@@ -290,7 +336,7 @@
             transition: 0.3s;
         }
         
-        /* Hero Section */
+        /* Hero Section - Improved Readability */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -308,16 +354,34 @@
         }
         
         .hero-title {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
             background: linear-gradient(45deg, #60a5fa, #10b981, #f59e0b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-size: 200% 200%;
             animation: gradientShift 5s ease infinite;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        /* Add a subtle background behind the text for better readability */
+        .hero-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 10px;
+            z-index: -1;
+            backdrop-filter: blur(5px);
         }
         
         @keyframes gradientShift {
@@ -331,6 +395,13 @@
             margin-bottom: 15px;
             color: var(--text-light);
             line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(15, 23, 42, 0.5);
+            padding: 15px 25px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
         }
         
         .cta-button {
@@ -615,11 +686,13 @@
             }
             
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+                padding: 15px;
             }
             
             .hero-subtitle {
                 font-size: 1.1rem;
+                padding: 15px 20px;
             }
             
             .section-title {
@@ -639,6 +712,10 @@
                 width: 100vw;
                 height: 100vh;
                 opacity: 0.2;
+            }
+            
+            .floating-icon {
+                font-size: 1.5rem;
             }
         }
         
@@ -669,6 +746,10 @@
             gap: 10px;
             font-size: 0.9rem;
             color: var(--text-light);
+            background: rgba(15, 23, 42, 0.5);
+            padding: 10px 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
         }
         
         .trust-icon {
@@ -749,6 +830,11 @@
     <!-- Animated Space Background -->
     <div class="space-background" id="spaceBackground">
         <!-- Stars, planets, and other space elements will be generated by JavaScript -->
+    </div>
+    
+    <!-- IT/Freelancing Floating Icons -->
+    <div class="floating-icons" id="floatingIcons">
+        <!-- Icons will be generated by JavaScript -->
     </div>
     
     <!-- Earth Animation -->
@@ -959,7 +1045,7 @@
             for (let i = 0; i < 200; i++) {
                 const star = document.createElement('div');
                 star.classList.add('star');
-                star.style.width = Math.random() * 3 + 'px';
+                star.style.width = Math.random() * 2 + 'px'; // Smaller stars
                 star.style.height = star.style.width;
                 star.style.left = Math.random() * 100 + '%';
                 star.style.top = Math.random() * 100 + '%';
@@ -968,11 +1054,11 @@
                 spaceBg.appendChild(star);
             }
             
-            // Create planets
+            // Create smaller planets
             for (let i = 0; i < 5; i++) {
                 const planet = document.createElement('div');
                 planet.classList.add('planet');
-                const size = Math.random() * 100 + 50;
+                const size = Math.random() * 30 + 20; // Smaller planets
                 planet.style.width = size + 'px';
                 planet.style.height = size + 'px';
                 planet.style.left = Math.random() * 90 + '%';
@@ -1007,7 +1093,7 @@
             for (let i = 0; i < 4; i++) {
                 const nebula = document.createElement('div');
                 nebula.classList.add('nebula');
-                const size = Math.random() * 400 + 200;
+                const size = Math.random() * 200 + 100; // Smaller nebulas
                 nebula.style.width = size + 'px';
                 nebula.style.height = size + 'px';
                 nebula.style.left = Math.random() * 80 + '%';
@@ -1024,6 +1110,23 @@
                 nebula.style.animationDelay = Math.random() * 5 + 's';
                 nebula.style.animationDuration = (Math.random() * 15 + 10) + 's';
                 spaceBg.appendChild(nebula);
+            }
+        }
+        
+        // Create IT/Freelancing floating icons
+        function createFloatingIcons() {
+            const floatingIcons = document.getElementById('floatingIcons');
+            const icons = ['💻', '💰', '🌐', '📊', '🔧', '🚀', '💼', '📈', '🔍', '⚡'];
+            
+            for (let i = 0; i < 15; i++) {
+                const icon = document.createElement('div');
+                icon.classList.add('floating-icon');
+                icon.textContent = icons[Math.floor(Math.random() * icons.length)];
+                icon.style.left = Math.random() * 95 + '%';
+                icon.style.top = Math.random() * 95 + '%';
+                icon.style.animationDelay = Math.random() * 10 + 's';
+                icon.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                floatingIcons.appendChild(icon);
             }
         }
         
@@ -1120,8 +1223,9 @@
             handleScrollAnimations();
         });
         
-        // Initialize the space background
+        // Initialize the space background and floating icons
         createSpaceBackground();
+        createFloatingIcons();
         
         // Initial background update and animations
         updateBackgroundOnScroll();
