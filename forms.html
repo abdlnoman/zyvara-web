@@ -1,24 +1,606 @@
 <!DOCTYPE html>
 <html lang="en">
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Zyvara - Empowering Youth Through Digital Earning</title>
-            <link rel="icon" type="image/png" href="images/nest (1).png">
-            <meta name="description" content="Zyvara helps students and beginners transform digital skills into real income. Join our community of digital associates for secure online earning opportunities in Bangladesh.">
-            <meta name="keywords" content="Zyvara, online earning Bangladesh, student jobs, micro tasks, digital associate, VPS Bangladesh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyvara Registration | Digital Associate Application</title>
+    <link rel="icon" type="image/png" href="images/nest (1).png">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Register as a Zyvara Digital Associate. Access USA virtual computers and start earning online. Secure application process for students in Bangladesh.">
+    <meta name="keywords" content="Zyvara registration, digital associate application, online earning Bangladesh, student jobs, VPS Bangladesh">
+    <meta name="author" content="Zyvara">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Zyvara Registration | Digital Associate Application">
+    <meta property="og:description" content="Register as a Zyvara Digital Associate and start your online earning journey with USA virtual computer access.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zyvara.it.com/forms.html">
+    <meta property="og:image" content="https://www.zyvara.it.com/images/zyvara-registration-og.jpg">
+    
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #3b82f6;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --text: #ffffff;
+            --text-light: #cbd5e1;
+            --background: #0f172a;
+            --background-alt: #1e293b;
+            --border: #334155;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Animated Space Background */
+        .space-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite ease-in-out;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: float 30s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+        
+        .comet {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, transparent, #60a5fa, transparent);
+            border-radius: 50%;
+            animation: comet 15s infinite linear;
+            opacity: 0;
+        }
+        
+        @keyframes comet {
+            0% {
+                transform: translate(-100px, -100px) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            20% {
+                transform: translate(100vw, 100vh) scale(1);
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        .nebula {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.1;
+            animation: pulse 20s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.05; }
+            100% { transform: scale(1.2); opacity: 0.15; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Header Styles */
+        .header {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar {
+            padding: 15px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo {
+            height: 45px;
+            width: auto;
+            transition: transform 0.3s ease;
+            filter: brightness(0) invert(1);
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .tagline {
+            color: var(--text);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 15px;
+            border-radius: 6px;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--primary-light);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-light);
+        }
+        
+        .nav-link:hover:after, .nav-link.active:after {
+            width: 80%;
+            left: 10%;
+        }
+        
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            padding: 140px 0 60px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(30, 64, 175, 0.9));
+            color: white;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,197.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Forms Grid */
+        .forms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .form-card {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .form-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-light);
+        }
+        
+        .form-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .form-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-light);
+        }
+        
+        .form-card p {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+        
+        .form-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.5s ease;
+        }
+        
+        .form-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+        }
+        
+        .form-button:hover:before {
+            left: 100%;
+        }
+        
+        /* Forms Note Section */
+        .forms-note {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 60px;
+            border-left: 5px solid var(--secondary);
+            backdrop-filter: blur(5px);
+        }
+        
+        .forms-note h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+        }
+        
+        .forms-note ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .forms-note li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-light);
+        }
+        
+        .forms-note li:before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Registration Process Section */
+        .registration-process {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 60px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .registration-process h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--primary-light);
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0 auto 15px;
+            box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
+        }
+        
+        .process-step h4 {
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        
+        .process-step p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background: rgba(15, 23, 42, 0.9);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 100px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .logo-footer {
+            height: 40px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+        
+        .tagline-footer {
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+        
+        .footer-section h3 {
+            color: #f1f5f9;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #60a5fa;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background-color: rgba(15, 23, 42, 0.95);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+                padding: 20px 0;
+                gap: 0;
+                backdrop-filter: blur(10px);
+            }
             
-            <!-- Open Graph Tags -->
-            <meta property="og:title" content="Zyvara - Empowering Youth Through Digital Earning">
-            <meta property="og:description" content="Transform your digital skills into real income with Zyvara's secure platform for students and beginners.">
-            <meta property="og:type" content="website">
-            <meta property="og:url" content="https://www.zyvara.it.com/forms.html">
-            <meta property="og:image" content="https://via.placeholder.com/1200x630/2563eb/ffffff?text=Zyvara">
+            .nav-menu.active {
+                left: 0;
+            }
             
-            <link rel="stylesheet" href="CSS/style.css">
-        </head>
+            .nav-item {
+                margin: 10px 0;
+            }
+            
+            .nav-toggle {
+                display: flex;
+            }
+            
+            .page-header {
+                padding: 120px 0 50px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .forms-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .forms-note, .registration-process {
+                padding: 25px;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+        }
+        
+        /* Animation for scroll */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        /* Scroll progress indicator */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-light), var(--secondary));
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+    </style>
+</head>
 <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Animated Space Background -->
+    <div class="space-background" id="spaceBackground">
+        <!-- Stars, planets, and other space elements will be generated by JavaScript -->
+    </div>
+
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
@@ -33,7 +615,7 @@
                         <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="forms.html" class="nav-link active">Forms</a>
+                        <a href="forms.html" class="nav-link active">Registration</a>
                     </li>
                     <li class="nav-item">
                         <a href="terms.html" class="nav-link">Terms</a>
@@ -56,54 +638,90 @@
     <main>
         <div class="container">
             <div class="page-header">
-                <h1>All Zyvara Forms</h1>
-                <p>Access all essential forms for your digital associate journey.</p>
+                <h1>Zyvara Registration Portal</h1>
+                <p>Access all essential forms for your digital associate journey. Secure and easy-to-use forms for registration, services, and support.</p>
             </div>
 
+            <!-- Registration Process Section -->
+            <section class="registration-process fade-in">
+                <h2>Become a Digital Associate in 4 Simple Steps</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Complete Recruitment Process</h4>
+                        <p>Fill out the digital associate application form with your details</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Verification and Joining</h4>
+                        <p>complete identity verification and join the team</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Training & Onboarding</h4>
+                        <p>Complete orientation and training modules</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Start Earning</h4>
+                        <p>Access USA virtual computers and begin completing tasks</p>
+                    </div>
+                </div>
+            </section>
+
             <div class="forms-grid">
-                <div class="form-card">
+                <div class="form-card fade-in">
                     <div class="form-icon">📝</div>
-                    <h3>Join</h3>
-                    <p>Start your journey as a Zyvara Digital Associate. Complete your Application process.</p>
+                    <h3>Digital Associate Registration</h3>
+                    <p>Start your journey as a Zyvara Digital Associate. Complete your application process to access USA virtual computers and earning opportunities.</p>
                     <a href="https://forms.gle/uAu3bkQUDeVfi63A7" target="_blank" class="form-button">Apply Now</a>
                 </div>
 
-                <div class="form-card">
+                <div class="form-card fade-in">
                     <div class="form-icon">🖥️</div>
-                    <h3>Buy Residential VPS</h3>
-                    <p>Purchase USA Residential Virtual Private Server services for your online operations.</p>
+                    <h3>USA Residential VPS</h3>
+                    <p>Purchase USA Residential Virtual Private Server services for your online operations. Essential for accessing international digital tasks.</p>
                     <a href="https://forms.gle/GA15KgfDKQyr3J26A" target="_blank" class="form-button">Buy VPS</a>
                 </div>
 
-                <div class="form-card">
+                <div class="form-card fade-in">
                     <div class="form-icon">💰</div>
-                    <h3>Withdrawal</h3>
-                    <p>Request withdrawal of your earned income through our secure and verified process.</p>
+                    <h3>Withdrawal Request</h3>
+                    <p>Request withdrawal of your earned income through our secure and verified process. Fast and reliable payment processing.</p>
                     <a href="https://forms.gle/A6BtsvNuxBJLR9mv9" target="_blank" class="form-button">Request Withdrawal</a>
                 </div>
 
-                <div class="form-card">
+                <div class="form-card fade-in">
                     <div class="form-icon">📱</div>
                     <h3>SMS Verification</h3>
-                    <p>Complete SMS verification from here.</p>
+                    <p>Complete SMS verification for your accounts and services. Secure verification process for platform access.</p>
                     <a href="https://forms.gle/CjoPurKgtNeFQPUL6" target="_blank" class="form-button">Verify SMS</a>
                 </div>
 
-                <div class="form-card">
+                <div class="form-card fade-in">
                     <div class="form-icon">🔢</div>
-                    <h3>Buy SSN</h3>
-                    <p>Purchase Social Security Number services for your digital associate requirements.</p>
-                    <a href="https://forms.gle/KFMyj2ih12UuMrhW9" target="_blank" class="form-button">Buy SSN</a>
+                    <h3>SSN Services</h3>
+                    <p>Purchase Social Security Number services for your digital associate requirements. Verified and secure SSN solutions.</p>
+                    <a href="https://forms.gle/KFMyj2ih12UuMrhW9" target="_blank" class="form-button">Get SSN</a>
+                </div>
+                
+                <div class="form-card fade-in">
+                    <div class="form-icon">🆘</div>
+                    <h3>Support Request</h3>
+                    <p>Need assistance? Contact our support team for help with any issues or questions about our services.</p>
+                    <a href="contact.html" class="form-button">Get Support</a>
                 </div>
             </div>
 
-            <div class="forms-note">
+            <div class="forms-note fade-in">
                 <h3>Important Notes</h3>
                 <ul>
-                    <li>All forms are secure and processed through official Zyvara systems</li>
-                    <li>Ensure you provide accurate information in all submissions</li>
-                    <li>For any assistance, contact our support team</li>
-                    <li>Processing times may vary based on verification requirements</li>
+                    <li>All forms are secure and processed through official Zyvara systems with encryption</li>
+                    <li>Ensure you provide accurate and verifiable information in all submissions</li>
+                    <li>For any assistance with form completion, contact our support team</li>
+                    <li>Processing times may vary based on verification requirements (typically 1-3 business days)</li>
+                    <li>Keep records of your submissions for future reference</li>
+                    <li>All services are subject to our Terms and Conditions</li>
                 </ul>
             </div>
         </div>
@@ -118,27 +736,189 @@
                         <img src="images/nest (1).png" alt="Zyvara - Empowering Youth" class="logo-footer">
                         <span class="tagline-footer">Empowering Youth</span>
                     </div>
-                    <p  style="margin-top: 30px;"> <a href="index.html" target="">Join us</a></p>
-                    <p> <a href="terms.html" target="">Terms</a></p>
+                    <p style="margin-top: 30px;"><a href="index.html">Join us</a></p>
+                    <p><a href="terms.html">Terms & Conditions</a></p>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p>Email: <br><a href="mailto:info@zyvara.it.com">info@zyvara.it.com
-                    </a><br>
-                <a href="mailto:join@zyvara.it.com">join@zyvara.it.com</a>
-                </p>
-                    <p>Phone: <a href="tel:01608273145">01608273145</a>, <a href="tel:01857695936">01857695936</a></p>
-                    <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61581017852252" target="_blank">Zyvara Official Page</a></p>
-                    <p>LinkedIn: <a href="https://linkedin.com/company/zyvara" target="_blank">Zyvara</a></p>
-                    
+                    <p>Email: <br>
+                        <a href="mailto:info@zyvara.it.com">info@zyvara.it.com</a><br>
+                        <a href="mailto:join@zyvara.it.com">join@zyvara.it.com</a>
+                    </p>
+                    <p>Phone: 
+                        <a href="tel:01608273145">01608273145</a>, 
+                        <a href="tel:01857695936">01857695936</a>
+                    </p>
+                    <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61581017852252" target="_blank" rel="noopener">Zyvara Official Page</a></p>
+                    <p>LinkedIn: <a href="https://linkedin.com/company/zyvara" target="_blank" rel="noopener">Zyvara</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Zyvara. All rights reserved.</p>
+                <p>&copy; 2025 Zyvara. All rights reserved. | Digital Associates Program</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        // Create animated space background
+        function createSpaceBackground() {
+            const spaceBg = document.getElementById('spaceBackground');
+            
+            // Create stars
+            for (let i = 0; i < 200; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                star.style.animationDuration = (Math.random() * 5 + 3) + 's';
+                spaceBg.appendChild(star);
+            }
+            
+            // Create planets
+            for (let i = 0; i < 5; i++) {
+                const planet = document.createElement('div');
+                planet.classList.add('planet');
+                const size = Math.random() * 100 + 50;
+                planet.style.width = size + 'px';
+                planet.style.height = size + 'px';
+                planet.style.left = Math.random() * 90 + '%';
+                planet.style.top = Math.random() * 90 + '%';
+                
+                // Random planet colors
+                const colors = [
+                    'radial-gradient(circle, #f59e0b, #d97706)',
+                    'radial-gradient(circle, #10b981, #059669)',
+                    'radial-gradient(circle, #8b5cf6, #7c3aed)',
+                    'radial-gradient(circle, #ef4444, #dc2626)',
+                    'radial-gradient(circle, #3b82f6, #2563eb)'
+                ];
+                planet.style.background = colors[Math.floor(Math.random() * colors.length)];
+                planet.style.animationDelay = Math.random() * 10 + 's';
+                planet.style.animationDuration = (Math.random() * 20 + 20) + 's';
+                spaceBg.appendChild(planet);
+            }
+            
+            // Create comets
+            for (let i = 0; i < 3; i++) {
+                const comet = document.createElement('div');
+                comet.classList.add('comet');
+                comet.style.left = Math.random() * 20 + '%';
+                comet.style.top = Math.random() * 20 + '%';
+                comet.style.animationDelay = Math.random() * 10 + 's';
+                comet.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                spaceBg.appendChild(comet);
+            }
+            
+            // Create nebulas
+            for (let i = 0; i < 4; i++) {
+                const nebula = document.createElement('div');
+                nebula.classList.add('nebula');
+                const size = Math.random() * 400 + 200;
+                nebula.style.width = size + 'px';
+                nebula.style.height = size + 'px';
+                nebula.style.left = Math.random() * 80 + '%';
+                nebula.style.top = Math.random() * 80 + '%';
+                
+                // Random nebula colors
+                const colors = [
+                    'radial-gradient(circle, rgba(96, 165, 250, 0.3), transparent)',
+                    'radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent)',
+                    'radial-gradient(circle, rgba(16, 185, 129, 0.3), transparent)',
+                    'radial-gradient(circle, rgba(245, 158, 11, 0.3), transparent)'
+                ];
+                nebula.style.background = colors[Math.floor(Math.random() * colors.length)];
+                nebula.style.animationDelay = Math.random() * 5 + 's';
+                nebula.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                spaceBg.appendChild(nebula);
+            }
+        }
+        
+        // Update background based on scroll
+        function updateBackgroundOnScroll() {
+            const scrollY = window.scrollY;
+            const spaceBg = document.getElementById('spaceBackground');
+            
+            // Move stars based on scroll
+            const stars = document.querySelectorAll('.star');
+            stars.forEach(star => {
+                const speed = 0.1;
+                star.style.transform = `translateY(${scrollY * speed}px)`;
+            });
+            
+            // Move planets based on scroll (slower)
+            const planets = document.querySelectorAll('.planet');
+            planets.forEach(planet => {
+                const speed = 0.05;
+                planet.style.transform = `translateY(${scrollY * speed}px) rotate(${scrollY * 0.1}deg)`;
+            });
+            
+            // Update scroll progress indicator
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const winHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight - winHeight;
+            const scrollPercent = (scrollY / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        }
+        
+        // Mobile menu toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.nav-toggle').classList.remove('active');
+            });
+        });
+        
+        // Update current year in footer
+        document.querySelector('.footer-bottom p').innerHTML = `&copy; ${new Date().getFullYear()} Zyvara. All rights reserved. | Digital Associates Program`;
+        
+        // Scroll animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.form-card, .forms-note, .registration-process').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.7)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            }
+            
+            updateBackgroundOnScroll();
+        });
+        
+        // Initialize the space background
+        createSpaceBackground();
+        
+        // Initial background update
+        updateBackgroundOnScroll();
+    </script>
 </body>
 </html>

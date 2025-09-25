@@ -3,21 +3,760 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zyvara - Empowering Youth Through Digital Earning</title>
+    <title>Zyvara - Digital Associates Program | Online Earning for Students in Bangladesh</title>
     <link rel="icon" type="image/png" href="images/nest (1).png">
-    <meta name="description" content="Zyvara helps students and beginners transform digital skills into real income. Join our community of digital associates for secure online earning opportunities in Bangladesh.">
-    <meta name="keywords" content="Zyvara, online earning Bangladesh, student jobs, micro tasks, digital associate, VPS Bangladesh">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Zyvara Digital Associates Program: Earn income with USA virtual computer access. Perfect for students in Bangladesh. Join now for secure online earning opportunities.">
+    <meta name="keywords" content="Zyvara, online earning Bangladesh, student jobs, digital associate, USA virtual computer, VPS Bangladesh, micro tasks, online income, digital earning">
+    <meta name="author" content="Zyvara">
+    <meta name="robots" content="index, follow">
     
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Zyvara - Empowering Youth Through Digital Earning">
-    <meta property="og:description" content="Transform your digital skills into real income with Zyvara's secure platform for students and beginners.">
+    <meta property="og:title" content="Zyvara - Digital Associates Program | Online Earning for Students">
+    <meta property="og:description" content="Transform your digital skills into real income with Zyvara's secure platform. Access USA virtual computers and earn from Bangladesh.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.zyvara.it.com">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/2563eb/ffffff?text=Zyvara">
+    <meta property="og:image" content="https://www.zyvara.it.com/images/zyvara-og-image.jpg">
     
-    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #3b82f6;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --text: #ffffff;
+            --text-light: #cbd5e1;
+            --background: #0f172a;
+            --background-alt: #1e293b;
+            --border: #334155;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        /* Animated Space Background */
+        .space-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+        
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite ease-in-out;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: float 30s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+        
+        .comet {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, transparent, #60a5fa, transparent);
+            border-radius: 50%;
+            animation: comet 15s infinite linear;
+            opacity: 0;
+        }
+        
+        @keyframes comet {
+            0% {
+                transform: translate(-100px, -100px) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            20% {
+                transform: translate(100vw, 100vh) scale(1);
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        .nebula {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.1;
+            animation: pulse 20s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.05; }
+            100% { transform: scale(1.2); opacity: 0.15; }
+        }
+        
+        /* Earth Animation */
+        .earth-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70vw;
+            height: 70vh;
+            z-index: -1;
+            opacity: 0.3;
+            filter: blur(2px);
+            pointer-events: none;
+        }
+        
+        .earth {
+            width: 100%;
+            height: 100%;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Earth_Western_Hemisphere_transparent_background.png/1024px-Earth_Western_Hemisphere_transparent_background.png') no-repeat center center;
+            background-size: contain;
+            animation: rotateEarth 120s infinite linear;
+        }
+        
+        .earth-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+            animation: pulseGlow 8s infinite alternate;
+            z-index: -1;
+        }
+        
+        @keyframes rotateEarth {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulseGlow {
+            0% { transform: scale(1); opacity: 0.3; }
+            100% { transform: scale(1.1); opacity: 0.6; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Header Styles */
+        .header {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar {
+            padding: 15px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo {
+            height: 45px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .tagline {
+            color: var(--text);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 15px;
+            border-radius: 6px;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--primary-light);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-light);
+        }
+        
+        .nav-link:hover:after, .nav-link.active:after {
+            width: 80%;
+            left: 10%;
+        }
+        
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 100px 0 50px;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(45deg, #60a5fa, #10b981, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradientShift 5s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.5s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.6);
+        }
+        
+        .cta-button:hover:before {
+            left: 100%;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--text);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-light), var(--secondary));
+            border-radius: 2px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            backdrop-filter: blur(5px);
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        
+        .feature-card.animate {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.6s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-light);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-light);
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* How It Works Section */
+        .how-it-works {
+            padding: 100px 0;
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        .step {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            padding: 0 20px;
+            position: relative;
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        
+        .step.animate {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.6s ease;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
+        }
+        
+        .step h3 {
+            margin-bottom: 10px;
+            color: var(--primary-light);
+        }
+        
+        .step p {
+            color: var(--text-light);
+        }
+        
+        .step-connector {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            width: calc(100% - 120px);
+            height: 2px;
+            background: linear-gradient(to right, var(--primary-light), var(--secondary));
+            z-index: -1;
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background: rgba(15, 23, 42, 0.9);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 100px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .logo-footer {
+            height: 40px;
+            width: auto;
+        }
+        
+        .tagline-footer {
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+        
+        .footer-section h3 {
+            color: #f1f5f9;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #60a5fa;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background-color: rgba(15, 23, 42, 0.95);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+                padding: 20px 0;
+                gap: 0;
+                backdrop-filter: blur(10px);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-item {
+                margin: 10px 0;
+            }
+            
+            .nav-toggle {
+                display: flex;
+            }
+            
+            .hero {
+                padding: 120px 0 50px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .steps-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .step-connector {
+                display: none;
+            }
+            
+            .earth-container {
+                width: 100vw;
+                height: 100vh;
+                opacity: 0.2;
+            }
+        }
+        
+        /* Scroll progress indicator */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-light), var(--secondary));
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+        
+        /* Trust Indicators */
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .trust-icon {
+            font-size: 1.2rem;
+            color: var(--secondary);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            margin: 50px 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(5px);
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        
+        .testimonial-card.animate {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.6s ease;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+    </style>
 </head>
 <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Animated Space Background -->
+    <div class="space-background" id="spaceBackground">
+        <!-- Stars, planets, and other space elements will be generated by JavaScript -->
+    </div>
+    
+    <!-- Earth Animation -->
+    <div class="earth-container">
+        <div class="earth-glow"></div>
+        <div class="earth"></div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
@@ -32,7 +771,7 @@
                         <a href="index.html" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="forms.html" class="nav-link">Forms</a>
+                        <a href="forms.html" target="" class="nav-link">Registration</a>
                     </li>
                     <li class="nav-item">
                         <a href="terms.html" class="nav-link">Terms</a>
@@ -57,10 +796,25 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title">"Empowering Youth For Financial Independence"</h1>
-                    <p class="hero-subtitle">Zyvara helps students and beginners transform <b>basic</b> Internet skills into good income <br>"from learning to <b>earning</b>." </p>
-                    <p>Your <b>Financial Freedom</b> is one click ahead</p>
-                    <a href="https://forms.gle/uAu3bkQUDeVfi63A7" target="_blank" class="cta-button">JOIN <b>NOW</b></a>
+                    <h1 class="hero-title">Empowering Youth For Financial Independence</h1>
+                    <p class="hero-subtitle">Zyvara helps students and beginners transform basic internet skills into sustainable income. From learning to earning, your financial freedom is just one click away.</p>
+                    
+                    <a href="https://forms.gle/uAu3bkQUDeVfi63A7" target="_blank" class="cta-button">JOIN NOW</a>
+                    
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>Secure & Trusted Platform</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>10+ Successful Associates</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>Timely Salary</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -71,24 +825,93 @@
                 <h2 class="section-title">Why Join Zyvara</h2>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon">🛡️</div>
-                        <h3>Join as a Digital Associate</h3>
-                        <p>Join Zyvara as a <b>Digital Associate</b>. Grab the opportunity To gain experience beside your Career path.</p>
+                        <div class="feature-icon">💼</div>
+                        <h3>Become a Digital Associate</h3>
+                        <p>Join Zyvara as a Digital Associate and gain valuable experience alongside your career path with access to USA virtual computers.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">📚</div>
                         <h3>Step-by-Step Guidance</h3>
-                        <p>Comprehensive <b>training and support</b> to help you succeed in digital earning opportunities.</p>
+                        <p>Comprehensive training and ongoing support to ensure your success in digital earning opportunities.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">🏆</div>
-                        <h3>Benefits</h3>
-                        <p>Earn a good <b>salary + bonuses</b> based on your performance. And we're always here to help.</p>
+                        <div class="feature-icon">💰</div>
+                        <h3>Structured Earnings</h3>
+                        <p>Earn a competitive salary with performance-based bonuses through our transparent payment system.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🤝</div>
                         <h3>Supportive Community</h3>
-                        <p>Join a thriving community of digital associates with ongoing support and networking opportunities.</p>
+                        <p>Join a thriving community of digital associates with networking opportunities and continuous support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Register</h3>
+                        <p>Complete the simple registration process to become a Digital Associate</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Train</h3>
+                        <p>Receive comprehensive training on our platform and tools</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Work</h3>
+                        <p>Access USA virtual computers and start completing digital tasks</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Earn</h3>
+                        <p>Get paid through our structured salary cycle with performance bonuses</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Success Stories</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Zyvara transformed my student life. I'm now earning a steady income while focusing on my studies. The support team is always helpful!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AR</div>
+                            <div class="author-info">
+                                <h4>Ahmed Rahman</h4>
+                                <p>University Student, Dhaka</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"As a beginner with no experience, I was skeptical. But Zyvara's training made everything easy. Now I earn enough to support my family."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">FS</div>
+                            <div class="author-info">
+                                <h4>Fatima Sultana</h4>
+                                <p>Digital Associate, Chittagong</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The USA virtual computer access is a game-changer. I can work on international projects right from my home in Bangladesh."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MH</div>
+                            <div class="author-info">
+                                <h4>Mohammad Hasan</h4>
+                                <p>IT Student, Sylhet</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,29 +925,207 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <img src="images/nest (1).png" alt="Zyvara" class="logo-footer">
-                        <span class="tagline-footer">Zyvara- Empowering Youth</span>
+                        <span class="tagline-footer">Zyvara - Empowering Youth</span>
                     </div>
-                    <p  style="margin-top: 30px;"> <a href="index.html" target="">Join us</a></p>
-                    <p> <a href="terms.html" target="">Terms</a></p>
+                    <p style="margin-top: 30px;"><a href="index.html">Join us</a></p>
+                    <p><a href="terms.html">Terms & Conditions</a></p>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p>Email: <br><a href="mailto:info@zyvara.it.com">info@zyvara.it.com
-                    </a><br>
-                <a href="mailto:join@zyvara.it.com">join@zyvara.it.com</a>
-                </p>
-                    <p>Phone: <a href="tel:01608273145">01608273145</a>, <a href="tel:01857695936">01857695936</a></p>
-                    <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61581017852252" target="_blank">Zyvara Official Page</a></p>
-                    <p>LinkedIn: <a href="https://linkedin.com/company/zyvara" target="_blank">Zyvara</a></p>
-                    
+                    <p>Email: <br>
+                        <a href="mailto:info@zyvara.it.com">info@zyvara.it.com</a><br>
+                        <a href="mailto:join@zyvara.it.com">join@zyvara.it.com</a>
+                    </p>
+                    <p>Phone: 
+                        <a href="tel:01608273145">01608273145</a>, 
+                        <a href="tel:01857695936">01857695936</a>
+                    </p>
+                    <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61581017852252" target="_blank" rel="noopener">Zyvara Official Page</a></p>
+                    <p>LinkedIn: <a href="https://linkedin.com/company/zyvara" target="_blank" rel="noopener">Zyvara</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Zyvara. All rights reserved.</p>
+                <p>&copy; 2025 Zyvara. All rights reserved. | Digital Associates Program</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        // Create animated space background
+        function createSpaceBackground() {
+            const spaceBg = document.getElementById('spaceBackground');
+            
+            // Create stars
+            for (let i = 0; i < 200; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                star.style.animationDuration = (Math.random() * 5 + 3) + 's';
+                spaceBg.appendChild(star);
+            }
+            
+            // Create planets
+            for (let i = 0; i < 5; i++) {
+                const planet = document.createElement('div');
+                planet.classList.add('planet');
+                const size = Math.random() * 100 + 50;
+                planet.style.width = size + 'px';
+                planet.style.height = size + 'px';
+                planet.style.left = Math.random() * 90 + '%';
+                planet.style.top = Math.random() * 90 + '%';
+                
+                // Random planet colors
+                const colors = [
+                    'radial-gradient(circle, #f59e0b, #d97706)',
+                    'radial-gradient(circle, #10b981, #059669)',
+                    'radial-gradient(circle, #8b5cf6, #7c3aed)',
+                    'radial-gradient(circle, #ef4444, #dc2626)',
+                    'radial-gradient(circle, #3b82f6, #2563eb)'
+                ];
+                planet.style.background = colors[Math.floor(Math.random() * colors.length)];
+                planet.style.animationDelay = Math.random() * 10 + 's';
+                planet.style.animationDuration = (Math.random() * 20 + 20) + 's';
+                spaceBg.appendChild(planet);
+            }
+            
+            // Create comets
+            for (let i = 0; i < 3; i++) {
+                const comet = document.createElement('div');
+                comet.classList.add('comet');
+                comet.style.left = Math.random() * 20 + '%';
+                comet.style.top = Math.random() * 20 + '%';
+                comet.style.animationDelay = Math.random() * 10 + 's';
+                comet.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                spaceBg.appendChild(comet);
+            }
+            
+            // Create nebulas
+            for (let i = 0; i < 4; i++) {
+                const nebula = document.createElement('div');
+                nebula.classList.add('nebula');
+                const size = Math.random() * 400 + 200;
+                nebula.style.width = size + 'px';
+                nebula.style.height = size + 'px';
+                nebula.style.left = Math.random() * 80 + '%';
+                nebula.style.top = Math.random() * 80 + '%';
+                
+                // Random nebula colors
+                const colors = [
+                    'radial-gradient(circle, rgba(96, 165, 250, 0.3), transparent)',
+                    'radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent)',
+                    'radial-gradient(circle, rgba(16, 185, 129, 0.3), transparent)',
+                    'radial-gradient(circle, rgba(245, 158, 11, 0.3), transparent)'
+                ];
+                nebula.style.background = colors[Math.floor(Math.random() * colors.length)];
+                nebula.style.animationDelay = Math.random() * 5 + 's';
+                nebula.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                spaceBg.appendChild(nebula);
+            }
+        }
+        
+        // Update background based on scroll
+        function updateBackgroundOnScroll() {
+            const scrollY = window.scrollY;
+            const spaceBg = document.getElementById('spaceBackground');
+            
+            // Move stars based on scroll
+            const stars = document.querySelectorAll('.star');
+            stars.forEach(star => {
+                const speed = 0.1;
+                star.style.transform = `translateY(${scrollY * speed}px)`;
+            });
+            
+            // Move planets based on scroll (slower)
+            const planets = document.querySelectorAll('.planet');
+            planets.forEach(planet => {
+                const speed = 0.05;
+                planet.style.transform = `translateY(${scrollY * speed}px) rotate(${scrollY * 0.1}deg)`;
+            });
+            
+            // Update scroll progress indicator
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const winHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight - winHeight;
+            const scrollPercent = (scrollY / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        }
+        
+        // Scroll animations
+        function handleScrollAnimations() {
+            const featureCards = document.querySelectorAll('.feature-card');
+            const steps = document.querySelectorAll('.step');
+            const testimonials = document.querySelectorAll('.testimonial-card');
+            
+            featureCards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight * 0.8;
+                
+                if (cardTop < triggerPoint) {
+                    card.classList.add('animate');
+                }
+            });
+            
+            steps.forEach(step => {
+                const stepTop = step.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight * 0.8;
+                
+                if (stepTop < triggerPoint) {
+                    step.classList.add('animate');
+                }
+            });
+            
+            testimonials.forEach(testimonial => {
+                const testimonialTop = testimonial.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight * 0.8;
+                
+                if (testimonialTop < triggerPoint) {
+                    testimonial.classList.add('animate');
+                }
+            });
+        }
+        
+        // Mobile menu toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+                document.querySelector('.nav-toggle').classList.remove('active');
+            });
+        });
+        
+        // Update current year in footer
+        document.querySelector('.footer-bottom p').innerHTML = `&copy; ${new Date().getFullYear()} Zyvara. All rights reserved. | Digital Associates Program`;
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.7)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            }
+            
+            updateBackgroundOnScroll();
+            handleScrollAnimations();
+        });
+        
+        // Initialize the space background
+        createSpaceBackground();
+        
+        // Initial background update and animations
+        updateBackgroundOnScroll();
+        handleScrollAnimations();
+    </script>
 </body>
 </html>
